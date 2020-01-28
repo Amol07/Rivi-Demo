@@ -110,3 +110,19 @@ extension UIViewController {
         self.present(controller, animated: true, completion: nil)
     }
 }
+
+import SDWebImage
+extension UIImageView {
+    
+    static var placeHolderImage: UIImage = #imageLiteral(resourceName: "Placeholder")
+    
+    func setImage(with url: String?, placeHolder: UIImage? = nil, completed: (() -> Void)? = nil) {
+        if let urlString = url {
+            self.sd_setImage(with: URL(string: urlString), placeholderImage: placeHolder) { (_, _, _, _) in
+                completed?()
+            }
+        } else {
+            self.image = placeHolder
+        }
+    }
+}
