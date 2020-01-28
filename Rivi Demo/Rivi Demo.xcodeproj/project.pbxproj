@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2EBC925F93CD012488F1CCA0 /* Pods_Rivi_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24DF5549007BAF5DD7DBAD1A /* Pods_Rivi_Demo.framework */; };
+		3C33446E23E0BF0D00231A13 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */; };
+		3C33447023E0BF2600231A13 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33446F23E0BF2600231A13 /* FoodDetailProtocols.swift */; };
+		3C33447223E0BFCA00231A13 /* FoodDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447123E0BFCA00231A13 /* FoodDetailsPresenter.swift */; };
 		3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703223DF181C009EDFBD /* AppDelegate.swift */; };
 		3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703423DF181C009EDFBD /* SceneDelegate.swift */; };
 		3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703823DF181C009EDFBD /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		24DF5549007BAF5DD7DBAD1A /* Pods_Rivi_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rivi_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
+		3C33446F23E0BF2600231A13 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
+		3C33447123E0BFCA00231A13 /* FoodDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsPresenter.swift; sourceTree = "<group>"; };
 		3C5E702F23DF181C009EDFBD /* Rivi Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rivi Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5E703223DF181C009EDFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5E703423DF181C009EDFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -212,8 +218,6 @@
 				3C5E705D23E027B3009EDFBD /* Presenter */,
 				3C5E705E23E027B3009EDFBD /* Views */,
 				3C5E705F23E027B3009EDFBD /* Protocols */,
-				3C5E706023E027B3009EDFBD /* Interactor */,
-				3C5E706123E027B3009EDFBD /* Router */,
 			);
 			path = "Detail Screen";
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 		3C5E705D23E027B3009EDFBD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3C33447123E0BFCA00231A13 /* FoodDetailsPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 		3C5E705E23E027B3009EDFBD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,22 +241,9 @@
 		3C5E705F23E027B3009EDFBD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3C33446F23E0BF2600231A13 /* FoodDetailProtocols.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		3C5E706023E027B3009EDFBD /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		3C5E706123E027B3009EDFBD /* Router */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Router;
 			sourceTree = "<group>";
 		};
 		3C5E706423E0287F009EDFBD /* Common */ = {
@@ -305,7 +298,6 @@
 				B9D17AC194D43E79668903F0 /* Pods-Rivi DemoTests.debug.xcconfig */,
 				D0854A25020BEAA3ECFB778B /* Pods-Rivi DemoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -479,7 +471,10 @@
 			files = (
 				3C5E707323E038B0009EDFBD /* DashboardViewController.swift in Sources */,
 				3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */,
+				3C33446E23E0BF0D00231A13 /* FoodDetailsViewController.swift in Sources */,
 				3C5E706823E02906009EDFBD /* Reachability.swift in Sources */,
+				3C33447023E0BF2600231A13 /* FoodDetailProtocols.swift in Sources */,
+				3C33447223E0BFCA00231A13 /* FoodDetailsPresenter.swift in Sources */,
 				3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */,
 				3C5E706F23E02A56009EDFBD /* UIView+Ext.swift in Sources */,
 				3C5E706A23E02925009EDFBD /* ApiClient.swift in Sources */,

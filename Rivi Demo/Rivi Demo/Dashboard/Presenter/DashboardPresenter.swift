@@ -13,6 +13,8 @@ class DashboardPresenter: DashboardPresenterProtocol {
     var interactor: DashboardInteractorInputProtocol?
     var router: DashboardRouterProtocol?
     
+    private var foodData: LocalFoodData?
+    
     func viewDidLoad() {
         self.getLocalFoodData()
     }
@@ -20,11 +22,33 @@ class DashboardPresenter: DashboardPresenterProtocol {
     func getLocalFoodData() {
         self.interactor?.getLocalFoodData()
     }
+    
+    func numberOfItemsIn(section: Int) -> Int {
+        guard let card = self.foodData?.card else {
+            return 0
+        }
+        return card.count
+    }
+    
+    func getFoodItemAt(indexPath: IndexPath) -> Card {
+        guard let card = self.foodData?.card else {
+            return Card()
+        }
+        return card[indexPath.item]
+    }
+    
+    func didSelectFoodItem(at indexPath: IndexPath) {
+        guard let foodData = self.foodData else {
+            return
+        }
+        self.router?.presentFoodDetailScreen(from: self.view, forIndex: indexPath.row, andDetail: foodData)
+    }
 }
 
 extension DashboardPresenter: DashboardInteractorOutputProtocol {
     
     func didFetch(response: LocalFoodData) {
+        self.foodData = response
         self.view?.loadingFinished()
     }
     

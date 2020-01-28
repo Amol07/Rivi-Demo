@@ -25,6 +25,9 @@ protocol DashboardPresenterProtocol: AnyObject {
     
     func viewDidLoad()
     func getLocalFoodData()
+    func numberOfItemsIn(section: Int) -> Int
+    func getFoodItemAt(indexPath: IndexPath) -> Card
+    func didSelectFoodItem(at indexPath: IndexPath)
 }
 
 // Presenter to Interactor
@@ -55,5 +58,8 @@ protocol DashboardFetcherOutputProtocol: AnyObject {
 
 // Presenter to Router
 protocol DashboardRouterProtocol {
-    static func createDashboardModule() -> UIViewController
+    static func createFoodDashboardModule() -> UIViewController
+    static func createFoodDetailModule(withIndex foodIndex: Int, foodDetail: LocalFoodData) -> UIViewController
+    func presentFoodDetailScreen(from view: DashboardViewProtocol?, forIndex selectedIndex: Int, andDetail foodDetail: LocalFoodData)
+
 }
