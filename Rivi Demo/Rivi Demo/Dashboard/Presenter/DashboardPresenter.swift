@@ -14,11 +14,11 @@ class DashboardPresenter: DashboardPresenterProtocol {
     var router: DashboardRouterProtocol?
     
     func viewDidLoad() {
-        
+        self.getLocalFoodData()
     }
     
     func getLocalFoodData() {
-        
+        self.interactor?.getLocalFoodData()
     }
 }
 

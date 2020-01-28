@@ -11,6 +11,11 @@ import Foundation
 class LocalFoodData: Decodable  {
     var headerDetails: CardHeaderDetail?
     var card: [Card]?
+    
+    private enum CodingKeys: String, CodingKey {
+        case headerDetails = "card_details"
+        case card
+    }
 }
 
 class CardHeaderDetail: Decodable {
@@ -25,6 +30,14 @@ class Card: Decodable {
     var cardImage: String?
     var cardNo: Int?
     var cardDetails: CardDetail?
+    
+    private enum CodingKeys: String, CodingKey {
+        case title
+        case description = "desc"
+        case cardImage = "img"
+        case cardNo = "card_no"
+        case cardDetails = "details"
+    }
 }
 
 class CardDetail: Decodable {
@@ -32,6 +45,13 @@ class CardDetail: Decodable {
     var location: [Location]?
     var dishes: [String]?
     var images: [String]?
+    
+    private enum CodingKeys: String, CodingKey {
+        case about
+        case location = "where"
+        case dishes
+        case images
+    }
 }
 
 class Location: Decodable {
