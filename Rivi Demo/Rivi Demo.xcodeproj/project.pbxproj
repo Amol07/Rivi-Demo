@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703223DF181C009EDFBD /* AppDelegate.swift */; };
 		3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703423DF181C009EDFBD /* SceneDelegate.swift */; };
-		3C5E703723DF181C009EDFBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703623DF181C009EDFBD /* ViewController.swift */; };
 		3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703823DF181C009EDFBD /* Main.storyboard */; };
 		3C5E703C23DF181D009EDFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703B23DF181D009EDFBD /* Assets.xcassets */; };
 		3C5E703F23DF181D009EDFBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703D23DF181D009EDFBD /* LaunchScreen.storyboard */; };
@@ -19,6 +18,13 @@
 		3C5E706D23E02989009EDFBD /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E706C23E02989009EDFBD /* CustomError.swift */; };
 		3C5E706F23E02A56009EDFBD /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E706E23E02A56009EDFBD /* UIView+Ext.swift */; };
 		3C5E707123E02A7F009EDFBD /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707023E02A7F009EDFBD /* EndPoints.swift */; };
+		3C5E707323E038B0009EDFBD /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707223E038B0009EDFBD /* DashboardViewController.swift */; };
+		3C5E707523E03939009EDFBD /* DashboardRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707423E03939009EDFBD /* DashboardRouter.swift */; };
+		3C5E707723E03A1A009EDFBD /* DashboardProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707623E03A1A009EDFBD /* DashboardProtocols.swift */; };
+		3C5E707923E03BC8009EDFBD /* LocalFoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707823E03BC8009EDFBD /* LocalFoodData.swift */; };
+		3C5E707B23E03D47009EDFBD /* DashboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707A23E03D47009EDFBD /* DashboardPresenter.swift */; };
+		3C5E707D23E03D5E009EDFBD /* DashboardInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707C23E03D5E009EDFBD /* DashboardInteractor.swift */; };
+		3C5E707F23E03D6C009EDFBD /* DashboardFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E707E23E03D6C009EDFBD /* DashboardFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +41,6 @@
 		3C5E702F23DF181C009EDFBD /* Rivi Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rivi Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5E703223DF181C009EDFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5E703423DF181C009EDFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C5E703623DF181C009EDFBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C5E703923DF181C009EDFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C5E703B23DF181D009EDFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C5E703E23DF181D009EDFBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +53,13 @@
 		3C5E706C23E02989009EDFBD /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		3C5E706E23E02A56009EDFBD /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		3C5E707023E02A7F009EDFBD /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		3C5E707223E038B0009EDFBD /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		3C5E707423E03939009EDFBD /* DashboardRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRouter.swift; sourceTree = "<group>"; };
+		3C5E707623E03A1A009EDFBD /* DashboardProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardProtocols.swift; sourceTree = "<group>"; };
+		3C5E707823E03BC8009EDFBD /* LocalFoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFoodData.swift; sourceTree = "<group>"; };
+		3C5E707A23E03D47009EDFBD /* DashboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardPresenter.swift; sourceTree = "<group>"; };
+		3C5E707C23E03D5E009EDFBD /* DashboardInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardInteractor.swift; sourceTree = "<group>"; };
+		3C5E707E23E03D6C009EDFBD /* DashboardFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +106,6 @@
 				3C5E705C23E027B3009EDFBD /* Detail Screen */,
 				3C5E703223DF181C009EDFBD /* AppDelegate.swift */,
 				3C5E703423DF181C009EDFBD /* SceneDelegate.swift */,
-				3C5E703623DF181C009EDFBD /* ViewController.swift */,
 				3C5E703823DF181C009EDFBD /* Main.storyboard */,
 				3C5E703B23DF181D009EDFBD /* Assets.xcassets */,
 				3C5E703D23DF181D009EDFBD /* LaunchScreen.storyboard */,
@@ -115,12 +126,12 @@
 		3C5E705423E027B3009EDFBD /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				3C5E705523E027B3009EDFBD /* Entity */,
-				3C5E705623E027B3009EDFBD /* Presenter */,
-				3C5E705723E027B3009EDFBD /* Fetcher */,
 				3C5E705823E027B3009EDFBD /* Views */,
-				3C5E705923E027B3009EDFBD /* Protocols */,
+				3C5E705623E027B3009EDFBD /* Presenter */,
 				3C5E705A23E027B3009EDFBD /* Interactor */,
+				3C5E705723E027B3009EDFBD /* Fetcher */,
+				3C5E705523E027B3009EDFBD /* Entity */,
+				3C5E705923E027B3009EDFBD /* Protocols */,
 				3C5E705B23E027B3009EDFBD /* Router */,
 			);
 			path = Dashboard;
@@ -130,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5E707023E02A7F009EDFBD /* EndPoints.swift */,
+				3C5E707823E03BC8009EDFBD /* LocalFoodData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -137,6 +149,7 @@
 		3C5E705623E027B3009EDFBD /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707A23E03D47009EDFBD /* DashboardPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 		3C5E705723E027B3009EDFBD /* Fetcher */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707E23E03D6C009EDFBD /* DashboardFetcher.swift */,
 			);
 			path = Fetcher;
 			sourceTree = "<group>";
@@ -151,6 +165,7 @@
 		3C5E705823E027B3009EDFBD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707223E038B0009EDFBD /* DashboardViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +173,7 @@
 		3C5E705923E027B3009EDFBD /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707623E03A1A009EDFBD /* DashboardProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -165,6 +181,7 @@
 		3C5E705A23E027B3009EDFBD /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707C23E03D5E009EDFBD /* DashboardInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -172,6 +189,7 @@
 		3C5E705B23E027B3009EDFBD /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				3C5E707423E03939009EDFBD /* DashboardRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -359,14 +377,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C5E703723DF181C009EDFBD /* ViewController.swift in Sources */,
+				3C5E707323E038B0009EDFBD /* DashboardViewController.swift in Sources */,
 				3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */,
 				3C5E706823E02906009EDFBD /* Reachability.swift in Sources */,
 				3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */,
 				3C5E706F23E02A56009EDFBD /* UIView+Ext.swift in Sources */,
 				3C5E706A23E02925009EDFBD /* ApiClient.swift in Sources */,
+				3C5E707723E03A1A009EDFBD /* DashboardProtocols.swift in Sources */,
+				3C5E707923E03BC8009EDFBD /* LocalFoodData.swift in Sources */,
+				3C5E707F23E03D6C009EDFBD /* DashboardFetcher.swift in Sources */,
+				3C5E707D23E03D5E009EDFBD /* DashboardInteractor.swift in Sources */,
 				3C5E707123E02A7F009EDFBD /* EndPoints.swift in Sources */,
+				3C5E707523E03939009EDFBD /* DashboardRouter.swift in Sources */,
 				3C5E706D23E02989009EDFBD /* CustomError.swift in Sources */,
+				3C5E707B23E03D47009EDFBD /* DashboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
