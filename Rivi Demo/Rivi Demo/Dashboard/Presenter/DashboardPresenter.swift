@@ -16,10 +16,6 @@ class DashboardPresenter: DashboardPresenterProtocol {
     private var foodData: LocalFoodData?
     
     func viewDidLoad() {
-        self.getLocalFoodData()
-    }
-    
-    func getLocalFoodData() {
         self.interactor?.getLocalFoodData()
     }
     

@@ -24,7 +24,6 @@ protocol DashboardPresenterProtocol: AnyObject {
     var router: DashboardRouterProtocol? { get set }
     
     func viewDidLoad()
-    func getLocalFoodData()
     func numberOfItemsIn(section: Int) -> Int
     func getFoodItemAt(indexPath: IndexPath) -> Card
     func didSelectFoodItem(at indexPath: IndexPath)
