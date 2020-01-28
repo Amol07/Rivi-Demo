@@ -1,0 +1,6 @@
+framework module Pods_Rivi_DemoTests {
+  umbrella header "Pods-Rivi DemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
