@@ -8,7 +8,7 @@
 
 import Foundation
 
-class LocalFoodData: Decodable  {
+struct LocalFoodData: Decodable  {
     var headerDetails: CardHeaderDetail?
     var card: [Card]?
     
@@ -18,13 +18,13 @@ class LocalFoodData: Decodable  {
     }
 }
 
-class CardHeaderDetail: Decodable {
+struct CardHeaderDetail: Decodable {
     var title: String?
     var type: String?
     var city: String?
 }
 
-class Card: Decodable {
+struct Card: Decodable {
     var title: String?
     var description: String?
     var cardImage: String?
@@ -40,7 +40,7 @@ class Card: Decodable {
     }
 }
 
-class CardDetail: Decodable {
+struct CardDetail: Decodable {
     var about: [String]?
     var location: [Location]?
     var dishes: [String]?
@@ -54,7 +54,7 @@ class CardDetail: Decodable {
     }
 }
 
-class Location: Decodable {
+struct Location: Decodable {
     var name: String?
     var distance: Float?
 }
