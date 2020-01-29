@@ -20,6 +20,8 @@ class DashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.estimatedRowHeight = 60
+        self.tableView.rowHeight = UITableView.automaticDimension
         self.title = "Restaurants"
         self.contentView.isHidden = true
         self.presenter?.viewDidLoad()

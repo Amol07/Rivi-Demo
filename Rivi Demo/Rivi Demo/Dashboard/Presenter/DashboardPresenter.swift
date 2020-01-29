@@ -15,7 +15,7 @@ class DashboardPresenter: DashboardPresenterProtocol {
     
     var isExpanded: Bool = false
     
-    private var maxCardToShowCount: Int = 3
+    private var maxCardToShowCount: Int = 2
     private var expandedDataSource: [Card] = [Card]()
     private var contractedDataSource: [Card] = [Card]()
     private var foodData: LocalFoodData?
