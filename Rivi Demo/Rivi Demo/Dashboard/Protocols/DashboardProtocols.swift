@@ -23,7 +23,10 @@ protocol DashboardPresenterProtocol: AnyObject {
     var interactor: DashboardInteractorInputProtocol? { get set }
     var router: DashboardRouterProtocol? { get set }
     
+    var isExpanded: Bool { get set }
+    
     func viewDidLoad()
+    func getHeaderText() -> String 
     func numberOfItemsIn(section: Int) -> Int
     func getFoodItemAt(indexPath: IndexPath) -> Card
     func didSelectFoodItem(at indexPath: IndexPath)

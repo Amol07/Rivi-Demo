@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum CardType: Int {
+    case food
+    case show
+    case invalid
+}
+
 struct LocalFoodData: Decodable  {
     var headerDetails: CardHeaderDetail?
     var card: [Card]?
@@ -30,6 +36,12 @@ struct Card: Decodable {
     var cardImage: String?
     var cardNo: Int?
     var cardDetails: CardDetail?
+    
+    var cardType: CardType = .food
+    
+    init(cardType: CardType) {
+        self.cardType = cardType
+    }
     
     private enum CodingKeys: String, CodingKey {
         case title

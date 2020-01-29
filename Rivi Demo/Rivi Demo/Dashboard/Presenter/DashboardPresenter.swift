@@ -13,24 +13,52 @@ class DashboardPresenter: DashboardPresenterProtocol {
     var interactor: DashboardInteractorInputProtocol?
     var router: DashboardRouterProtocol?
     
+    var maxCardToShowCount: Int = 2
+    var isExpanded: Bool = false
+    
     private var foodData: LocalFoodData?
+    private var dataSource: [Card] {
+        if self.isExpanded {
+            return self.expandedDataSource
+        } else {
+            return self.contractedDataSource
+        }
+    }
+    
+    private var expandedDataSource: [Card] {
+        guard var card = self.foodData?.card else {
+            return [Card]()
+        }
+        var showLessCard = Card(cardType: .show)
+        showLessCard.title = "SHOW LESS"
+        card.append(showLessCard)
+        return card
+    }
+    
+    private var contractedDataSource: [Card] {
+        guard let card = self.foodData?.card else { return [Card]() }
+        if card.count > self.maxCardToShowCount {
+            var showMoreCard = Card(cardType: .show)
+            showMoreCard.title = "SHOW MORE"
+            let slice = card.prefix(self.maxCardToShowCount)
+            var card = Array(slice)
+            card.append(showMoreCard)
+            return card
+        } else {
+            return card
+        }
+    }
     
     func viewDidLoad() {
         self.interactor?.getLocalFoodData()
     }
     
     func numberOfItemsIn(section: Int) -> Int {
-        guard let card = self.foodData?.card else {
-            return 0
-        }
-        return card.count
+        return self.dataSource.count
     }
     
     func getFoodItemAt(indexPath: IndexPath) -> Card {
-        guard let card = self.foodData?.card else {
-            return Card()
-        }
-        return card[indexPath.item]
+        return self.dataSource[indexPath.item]
     }
     
     func didSelectFoodItem(at indexPath: IndexPath) {
@@ -38,6 +66,13 @@ class DashboardPresenter: DashboardPresenterProtocol {
             return
         }
         self.router?.presentFoodDetailScreen(from: self.view, forIndex: indexPath.row, andDetail: foodData)
+    }
+    
+    func getHeaderText() -> String {
+        guard let foodData = self.foodData else {
+            return ""
+        }
+        return "\(foodData.headerDetails?.title ?? "") \(foodData.headerDetails?.city ?? "")"
     }
 }
 

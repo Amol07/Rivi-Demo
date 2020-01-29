@@ -11,6 +11,10 @@
 		3C33446E23E0BF0D00231A13 /* FoodDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */; };
 		3C33447023E0BF2600231A13 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33446F23E0BF2600231A13 /* FoodDetailProtocols.swift */; };
 		3C33447223E0BFCA00231A13 /* FoodDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447123E0BFCA00231A13 /* FoodDetailsPresenter.swift */; };
+		3C33447423E152E800231A13 /* SelfSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447323E152E800231A13 /* SelfSizedTableView.swift */; };
+		3C33447623E16FFB00231A13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447523E16FFB00231A13 /* ShadowView.swift */; };
+		3C33447823E1863400231A13 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447723E1863400231A13 /* FoodTableViewCell.swift */; };
+		3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */; };
 		3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703223DF181C009EDFBD /* AppDelegate.swift */; };
 		3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703423DF181C009EDFBD /* SceneDelegate.swift */; };
 		3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703823DF181C009EDFBD /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsViewController.swift; sourceTree = "<group>"; };
 		3C33446F23E0BF2600231A13 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		3C33447123E0BFCA00231A13 /* FoodDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsPresenter.swift; sourceTree = "<group>"; };
+		3C33447323E152E800231A13 /* SelfSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizedTableView.swift; sourceTree = "<group>"; };
+		3C33447523E16FFB00231A13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		3C33447723E1863400231A13 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
 		3C5E702F23DF181C009EDFBD /* Rivi Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rivi Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5E703223DF181C009EDFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5E703423DF181C009EDFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +192,10 @@
 			isa = PBXGroup;
 			children = (
 				3C5E707223E038B0009EDFBD /* DashboardViewController.swift */,
+				3C33447323E152E800231A13 /* SelfSizedTableView.swift */,
+				3C33447523E16FFB00231A13 /* ShadowView.swift */,
+				3C33447723E1863400231A13 /* FoodTableViewCell.swift */,
+				3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -480,11 +492,15 @@
 				3C5E706A23E02925009EDFBD /* ApiClient.swift in Sources */,
 				3C5E707723E03A1A009EDFBD /* DashboardProtocols.swift in Sources */,
 				3C5E707923E03BC8009EDFBD /* LocalFoodData.swift in Sources */,
+				3C33447423E152E800231A13 /* SelfSizedTableView.swift in Sources */,
 				3C5E707F23E03D6C009EDFBD /* DashboardFetcher.swift in Sources */,
 				3C5E707D23E03D5E009EDFBD /* DashboardInteractor.swift in Sources */,
+				3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */,
 				3C5E707123E02A7F009EDFBD /* EndPoints.swift in Sources */,
 				3C5E707523E03939009EDFBD /* DashboardRouter.swift in Sources */,
 				3C5E706D23E02989009EDFBD /* CustomError.swift in Sources */,
+				3C33447823E1863400231A13 /* FoodTableViewCell.swift in Sources */,
+				3C33447623E16FFB00231A13 /* ShadowView.swift in Sources */,
 				3C5E707B23E03D47009EDFBD /* DashboardPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
