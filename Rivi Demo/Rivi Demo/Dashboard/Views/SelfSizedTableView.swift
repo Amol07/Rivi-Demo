@@ -14,14 +14,13 @@ class SelfSizedTableView: UITableView {
         return UIScreen.main.bounds.height - y
     }
     
-    override func reloadData() {
-        super.reloadData()
-        self.invalidateIntrinsicContentSize()
-        self.layoutIfNeeded()
+    override var contentSize:CGSize {
+        didSet {
+            self.invalidateIntrinsicContentSize()
+        }
     }
     
     override var intrinsicContentSize: CGSize {
-        self.setNeedsLayout()
         self.layoutIfNeeded()
         let height = min(self.contentSize.height, self.maxHeight)
         return CGSize(width: self.contentSize.width, height: height)
