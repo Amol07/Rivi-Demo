@@ -13,39 +13,17 @@ class DashboardPresenter: DashboardPresenterProtocol {
     var interactor: DashboardInteractorInputProtocol?
     var router: DashboardRouterProtocol?
     
-    var maxCardToShowCount: Int = 2
     var isExpanded: Bool = false
     
+    private var maxCardToShowCount: Int = 3
+    private var expandedDataSource: [Card] = [Card]()
+    private var contractedDataSource: [Card] = [Card]()
     private var foodData: LocalFoodData?
     private var dataSource: [Card] {
         if self.isExpanded {
             return self.expandedDataSource
         } else {
             return self.contractedDataSource
-        }
-    }
-    
-    private var expandedDataSource: [Card] {
-        guard var card = self.foodData?.card else {
-            return [Card]()
-        }
-        var showLessCard = Card(cardType: .show)
-        showLessCard.title = "SHOW LESS"
-        card.append(showLessCard)
-        return card
-    }
-    
-    private var contractedDataSource: [Card] {
-        guard let card = self.foodData?.card else { return [Card]() }
-        if card.count > self.maxCardToShowCount {
-            var showMoreCard = Card(cardType: .show)
-            showMoreCard.title = "SHOW MORE"
-            let slice = card.prefix(self.maxCardToShowCount)
-            var card = Array(slice)
-            card.append(showMoreCard)
-            return card
-        } else {
-            return card
         }
     }
     
@@ -74,12 +52,40 @@ class DashboardPresenter: DashboardPresenterProtocol {
         }
         return "\(foodData.headerDetails?.title ?? "") \(foodData.headerDetails?.city ?? "")"
     }
+    
+    private func createExpandedDataSource(forCards cards: [Card]?) {
+        guard var card = cards else {
+            return
+        }
+        var showLessCard = Card(cardType: .show)
+        showLessCard.title = "SHOW LESS"
+        card.append(showLessCard)
+        self.expandedDataSource = card
+    }
+    
+    private func createContractedDataSource(forCards cards: [Card]?) {
+        guard let card = cards else {
+            return
+        }
+        if card.count > self.maxCardToShowCount {
+            var showMoreCard = Card(cardType: .show)
+            showMoreCard.title = "SHOW MORE"
+            let slice = card.prefix(self.maxCardToShowCount)
+            var card = Array(slice)
+            card.append(showMoreCard)
+            self.contractedDataSource = card
+        } else {
+            self.contractedDataSource = card
+        }
+    }
 }
 
 extension DashboardPresenter: DashboardInteractorOutputProtocol {
     
     func didFetch(response: LocalFoodData) {
         self.foodData = response
+        self.createExpandedDataSource(forCards: response.card)
+        self.createContractedDataSource(forCards: response.card)
         self.view?.loadingFinished()
     }
     
