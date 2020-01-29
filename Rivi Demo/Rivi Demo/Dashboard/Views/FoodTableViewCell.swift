@@ -9,6 +9,7 @@
 import UIKit
 
 class FoodTableViewCell: UITableViewCell, Reusable {
+    @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var foodImageView: UIImageView! {
@@ -22,5 +23,10 @@ class FoodTableViewCell: UITableViewCell, Reusable {
         self.titleLabel.text = card.title
         self.descriptionLabel.text = card.description
         self.foodImageView.setImage(with: card.cardImage, placeHolder: UIImageView.placeHolderImage)
+    }
+    
+    func updateContainerView() {
+        self.containerView.layer.cornerRadius = 8
+        self.containerView.addShadow()
     }
 }

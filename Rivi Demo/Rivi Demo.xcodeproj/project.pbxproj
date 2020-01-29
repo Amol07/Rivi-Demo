@@ -15,6 +15,8 @@
 		3C33447623E16FFB00231A13 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447523E16FFB00231A13 /* ShadowView.swift */; };
 		3C33447823E1863400231A13 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447723E1863400231A13 /* FoodTableViewCell.swift */; };
 		3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */; };
+		3C33447D23E1F19F00231A13 /* FoodDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */; };
+		3C33447E23E1F19F00231A13 /* FoodDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */; };
 		3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703223DF181C009EDFBD /* AppDelegate.swift */; };
 		3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703423DF181C009EDFBD /* SceneDelegate.swift */; };
 		3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703823DF181C009EDFBD /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		3C33447523E16FFB00231A13 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		3C33447723E1863400231A13 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
+		3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		3C5E702F23DF181C009EDFBD /* Rivi Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rivi Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5E703223DF181C009EDFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5E703423DF181C009EDFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,8 +231,8 @@
 		3C5E705C23E027B3009EDFBD /* Detail Screen */ = {
 			isa = PBXGroup;
 			children = (
-				3C5E705D23E027B3009EDFBD /* Presenter */,
 				3C5E705E23E027B3009EDFBD /* Views */,
+				3C5E705D23E027B3009EDFBD /* Presenter */,
 				3C5E705F23E027B3009EDFBD /* Protocols */,
 			);
 			path = "Detail Screen";
@@ -246,6 +250,8 @@
 			isa = PBXGroup;
 			children = (
 				3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */,
+				3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */,
+				3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 			files = (
 				3C5E703F23DF181D009EDFBD /* LaunchScreen.storyboard in Resources */,
 				3C5E703C23DF181D009EDFBD /* Assets.xcassets in Resources */,
+				3C33447E23E1F19F00231A13 /* FoodDetailsTableViewCell.xib in Resources */,
 				3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,6 +500,7 @@
 				3C5E707723E03A1A009EDFBD /* DashboardProtocols.swift in Sources */,
 				3C5E707923E03BC8009EDFBD /* LocalFoodData.swift in Sources */,
 				3C33447423E152E800231A13 /* SelfSizedTableView.swift in Sources */,
+				3C33447D23E1F19F00231A13 /* FoodDetailsTableViewCell.swift in Sources */,
 				3C5E707F23E03D6C009EDFBD /* DashboardFetcher.swift in Sources */,
 				3C5E707D23E03D5E009EDFBD /* DashboardInteractor.swift in Sources */,
 				3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */,

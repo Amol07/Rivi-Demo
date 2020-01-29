@@ -53,17 +53,17 @@ Barcelona</string>
                                                                         <constraint firstAttribute="width" constant="48" id="utP-HG-1C5"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="h50-8J-GRo">
-                                                                    <rect key="frame" x="61" y="10" width="248" height="38"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="h50-8J-GRo">
+                                                                    <rect key="frame" x="61" y="10" width="113.5" height="38"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Paella" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-BW-QaW">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="48" height="20.5"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Paella" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGt-BW-QaW">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="113.5" height="22.5"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Valencian Rice Dish" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVh-Ix-5cR">
-                                                                            <rect key="frame" x="0.0" y="23.5" width="113.5" height="14.5"/>
+                                                                            <rect key="frame" x="0.0" y="22.5" width="113.5" height="15.5"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <nil key="highlightedColor"/>
@@ -71,7 +71,7 @@ Barcelona</string>
                                                                     </subviews>
                                                                 </stackView>
                                                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="oC1-cA-gGP">
-                                                                    <rect key="frame" x="319" y="25.5" width="14" height="7.5"/>
+                                                                    <rect key="frame" x="184.5" y="25.5" width="148.5" height="7.5"/>
                                                                 </imageView>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EUQ-sy-s2I">
                                                                     <rect key="frame" x="61" y="57" width="285" height="1"/>
@@ -107,6 +107,7 @@ Barcelona</string>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="containerView" destination="nzB-vo-VqB" id="Zrz-S2-06f"/>
                                                     <outlet property="descriptionLabel" destination="SVh-Ix-5cR" id="KeW-Cr-K5y"/>
                                                     <outlet property="dropDownImageView" destination="oC1-cA-gGP" id="orO-EA-jKI"/>
                                                     <outlet property="foodImageView" destination="y6N-c0-Eo0" id="mfc-iF-ijy"/>
@@ -212,7 +213,7 @@ Barcelona</string>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07o-CV-kJ3">
-                                <rect key="frame" x="19" y="94" width="376" height="272.5"/>
+                                <rect key="frame" x="20" y="94" width="374" height="272.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURATED FOR MAYANK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-mq-msp">
                                         <rect key="frame" x="0.0" y="0.0" width="116" height="12"/>
@@ -229,10 +230,13 @@ Barcelona</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layer_6" translatesAutoresizingMaskIntoConstraints="NO" id="hIx-EV-LPU">
-                                        <rect key="frame" x="0.0" y="78.5" width="376" height="157"/>
+                                        <rect key="frame" x="0.0" y="78.5" width="374" height="157"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="157" id="Kmv-Mh-ILC"/>
+                                        </constraints>
                                     </imageView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="b7M-sh-21z">
-                                        <rect key="frame" x="160.5" y="235.5" width="55" height="37"/>
+                                        <rect key="frame" x="159.5" y="235.5" width="55" height="37"/>
                                         <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="currentPageIndicatorTintColor" red="0.16078431369999999" green="0.54117647059999996" blue="0.79215686269999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </pageControl>
@@ -255,86 +259,37 @@ Barcelona</string>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="fqm-mq-msp" secondAttribute="trailing" id="zmv-tg-kaH"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bob-Ty-OSG">
-                                <rect key="frame" x="20" y="374.5" width="374" height="467.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FoodDetailCell" rowHeight="58" id="NKM-wM-TKp">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="58"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NKM-wM-TKp" id="wo2-cn-2UF">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtS-Fc-6GC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="58"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Layer_4" translatesAutoresizingMaskIntoConstraints="NO" id="ALw-wn-PrB">
-                                                            <rect key="frame" x="6" y="6" width="48" height="46"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="48" id="0wA-li-4um"/>
-                                                                <constraint firstAttribute="height" constant="48" id="Erd-0W-2Km"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Paella" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvI-97-2IA">
-                                                            <rect key="frame" x="66" y="10" width="48" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Valencian Rice Dish" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpz-QC-j1y">
-                                                            <rect key="frame" x="66" y="33.5" width="113.5" height="14.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowDown" translatesAutoresizingMaskIntoConstraints="NO" id="gnR-he-W3M">
-                                                            <rect key="frame" x="347" y="25.5" width="14" height="7.5"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="dvI-97-2IA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="xtS-Fc-6GC" secondAttribute="top" constant="10" id="3yD-eQ-wVm"/>
-                                                        <constraint firstItem="dvI-97-2IA" firstAttribute="leading" secondItem="ALw-wn-PrB" secondAttribute="trailing" constant="12" id="4SQ-ng-AQz"/>
-                                                        <constraint firstItem="gnR-he-W3M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dvI-97-2IA" secondAttribute="trailing" constant="2" id="8dr-b8-ho4"/>
-                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ALw-wn-PrB" secondAttribute="bottom" constant="6" id="TVi-vM-dVD"/>
-                                                        <constraint firstItem="jpz-QC-j1y" firstAttribute="leading" secondItem="ALw-wn-PrB" secondAttribute="trailing" constant="12" id="UES-mz-FYY"/>
-                                                        <constraint firstItem="ALw-wn-PrB" firstAttribute="top" secondItem="xtS-Fc-6GC" secondAttribute="top" constant="6" id="V8I-X0-44Q"/>
-                                                        <constraint firstItem="gnR-he-W3M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jpz-QC-j1y" secondAttribute="trailing" constant="2" id="cP0-2y-xli"/>
-                                                        <constraint firstItem="jpz-QC-j1y" firstAttribute="top" secondItem="dvI-97-2IA" secondAttribute="bottom" constant="3" id="f8L-nU-tDK"/>
-                                                        <constraint firstItem="gnR-he-W3M" firstAttribute="centerY" secondItem="xtS-Fc-6GC" secondAttribute="centerY" id="lnj-7Y-apN"/>
-                                                        <constraint firstItem="ALw-wn-PrB" firstAttribute="leading" secondItem="xtS-Fc-6GC" secondAttribute="leading" constant="6" id="n0Y-WS-ehI"/>
-                                                        <constraint firstItem="dvI-97-2IA" firstAttribute="centerY" secondItem="ALw-wn-PrB" secondAttribute="centerY" priority="999" id="oYO-6g-Bsx"/>
-                                                        <constraint firstAttribute="bottom" secondItem="jpz-QC-j1y" secondAttribute="bottom" constant="10" id="uIG-Qe-yYd"/>
-                                                        <constraint firstAttribute="trailing" secondItem="gnR-he-W3M" secondAttribute="trailing" constant="13" id="xXP-rz-2Ph"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="xtS-Fc-6GC" secondAttribute="trailing" id="Pr6-xt-H2b"/>
-                                                <constraint firstItem="xtS-Fc-6GC" firstAttribute="top" secondItem="wo2-cn-2UF" secondAttribute="top" id="wZl-hw-Tzt"/>
-                                                <constraint firstItem="xtS-Fc-6GC" firstAttribute="leading" secondItem="wo2-cn-2UF" secondAttribute="leading" id="xPV-Jj-BUG"/>
-                                                <constraint firstAttribute="bottom" secondItem="xtS-Fc-6GC" secondAttribute="bottom" id="xTE-Jx-ZAp"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="6pE-Cx-ekW" id="4nS-Ms-cIT"/>
-                                    <outlet property="delegate" destination="6pE-Cx-ekW" id="VQV-pI-JoK"/>
-                                </connections>
-                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UT9-LN-GAm">
+                                <rect key="frame" x="0.0" y="366.5" width="414" height="529.5"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bob-Ty-OSG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="529.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="6pE-Cx-ekW" id="4nS-Ms-cIT"/>
+                                            <outlet property="delegate" destination="6pE-Cx-ekW" id="VQV-pI-JoK"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9279386585133681" green="0.92571338595098585" blue="0.93016393107575024" alpha="0.79774419175392675" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="bob-Ty-OSG" firstAttribute="leading" secondItem="UT9-LN-GAm" secondAttribute="leading" id="GPN-k4-Fz2"/>
+                                    <constraint firstItem="bob-Ty-OSG" firstAttribute="top" secondItem="UT9-LN-GAm" secondAttribute="top" id="Uby-Mp-fyT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bob-Ty-OSG" secondAttribute="bottom" id="i9r-Tz-gKv"/>
+                                    <constraint firstAttribute="trailing" secondItem="bob-Ty-OSG" secondAttribute="trailing" id="qm5-6d-tBM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="j3x-ea-cIK" firstAttribute="trailing" secondItem="bob-Ty-OSG" secondAttribute="trailing" constant="20" id="NcP-JP-aHE"/>
-                            <constraint firstItem="bob-Ty-OSG" firstAttribute="top" secondItem="07o-CV-kJ3" secondAttribute="bottom" constant="8" id="P0G-8x-OE7"/>
-                            <constraint firstItem="07o-CV-kJ3" firstAttribute="leading" secondItem="j3x-ea-cIK" secondAttribute="leading" constant="19" id="cTN-p4-HMj"/>
-                            <constraint firstItem="j3x-ea-cIK" firstAttribute="bottom" secondItem="bob-Ty-OSG" secondAttribute="bottom" constant="20" id="d9s-U7-WPg"/>
+                            <constraint firstAttribute="bottom" secondItem="UT9-LN-GAm" secondAttribute="bottom" id="4Sv-JA-OrO"/>
+                            <constraint firstAttribute="trailing" secondItem="UT9-LN-GAm" secondAttribute="trailing" id="HGL-TR-sBK"/>
+                            <constraint firstItem="UT9-LN-GAm" firstAttribute="top" secondItem="07o-CV-kJ3" secondAttribute="bottom" id="Zjk-G9-oxX"/>
+                            <constraint firstItem="07o-CV-kJ3" firstAttribute="leading" secondItem="j3x-ea-cIK" secondAttribute="leading" constant="20" id="cTN-p4-HMj"/>
                             <constraint firstItem="5Fi-1L-d5f" firstAttribute="leading" secondItem="j3x-ea-cIK" secondAttribute="leading" id="ddA-1J-Ilc"/>
+                            <constraint firstItem="UT9-LN-GAm" firstAttribute="leading" secondItem="y80-T5-1ZF" secondAttribute="leading" id="df0-Pn-xSE"/>
                             <constraint firstItem="5Fi-1L-d5f" firstAttribute="top" secondItem="j3x-ea-cIK" secondAttribute="top" id="hcI-bE-BLw"/>
-                            <constraint firstItem="bob-Ty-OSG" firstAttribute="leading" secondItem="j3x-ea-cIK" secondAttribute="leading" constant="20" id="hhU-Z6-fW4"/>
-                            <constraint firstItem="j3x-ea-cIK" firstAttribute="trailing" secondItem="07o-CV-kJ3" secondAttribute="trailing" constant="19" id="jBa-lc-m74"/>
+                            <constraint firstItem="j3x-ea-cIK" firstAttribute="trailing" secondItem="07o-CV-kJ3" secondAttribute="trailing" constant="20" id="jBa-lc-m74"/>
                             <constraint firstItem="5Fi-1L-d5f" firstAttribute="trailing" secondItem="j3x-ea-cIK" secondAttribute="trailing" id="rP6-bR-CFD"/>
                             <constraint firstItem="07o-CV-kJ3" firstAttribute="top" secondItem="5Fi-1L-d5f" secondAttribute="bottom" id="yW9-ep-PY0"/>
                         </constraints>
@@ -351,7 +306,7 @@ Barcelona</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UWK-AI-65K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.625" y="117.25352112676056"/>
+            <point key="canvasLocation" x="1759.4202898550725" y="117.1875"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vwg-vd-K7u">

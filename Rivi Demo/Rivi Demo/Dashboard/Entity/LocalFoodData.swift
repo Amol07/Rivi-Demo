@@ -14,7 +14,7 @@ enum CardType: Int {
     case invalid
 }
 
-struct LocalFoodData: Decodable  {
+class LocalFoodData: Decodable  {
     var headerDetails: CardHeaderDetail?
     var card: [Card]?
     
@@ -24,13 +24,13 @@ struct LocalFoodData: Decodable  {
     }
 }
 
-struct CardHeaderDetail: Decodable {
+class CardHeaderDetail: Decodable {
     var title: String?
     var type: String?
     var city: String?
 }
 
-struct Card: Decodable {
+class Card: Decodable {
     var title: String?
     var description: String?
     var cardImage: String?
@@ -38,6 +38,7 @@ struct Card: Decodable {
     var cardDetails: CardDetail?
     
     var cardType: CardType = .food
+    var isExpanded: Bool = false
     
     init(cardType: CardType) {
         self.cardType = cardType
@@ -52,7 +53,7 @@ struct Card: Decodable {
     }
 }
 
-struct CardDetail: Decodable {
+class CardDetail: Decodable {
     var about: [String]?
     var location: [Location]?
     var dishes: [String]?
@@ -66,7 +67,7 @@ struct CardDetail: Decodable {
     }
 }
 
-struct Location: Decodable {
+class Location: Decodable {
     var name: String?
     var distance: Float?
 }

@@ -42,18 +42,21 @@ extension UIView {
     }
     
     private var fillColor: UIColor {
-        return .white
+        return .clear
     }
     
     func addShadow() {
+        guard let layers = self.layer.sublayers, (layers.count > 0), ((layers[0] as? CAShapeLayer) == nil) else {
+            return
+        }
         let shadowLayer = CAShapeLayer()
         shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.cornerRadius).cgPath
         shadowLayer.fillColor = self.fillColor.cgColor
         shadowLayer.shadowColor = UIColor(red: 169.0/255.0, green: 172.0/255.0, blue: 189.0/255.0, alpha: 0.25).cgColor
         shadowLayer.shadowPath = shadowLayer.path
         shadowLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        shadowLayer.shadowOpacity = 1
-        shadowLayer.shadowRadius = 16
+        shadowLayer.shadowOpacity = 0.2
+        shadowLayer.shadowRadius = 3
         self.layer.insertSublayer(shadowLayer, at: 0)
     }
 }

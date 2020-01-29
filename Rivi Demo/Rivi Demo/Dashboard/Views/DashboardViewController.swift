@@ -85,7 +85,7 @@ extension DashboardViewController: UITableViewDelegate {
                 self.contentView.updateShadow()
             }
         } else {
-            
+            self.presenter?.didSelectFoodItem(at: indexPath)
         }
     }
 }

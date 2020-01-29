@@ -24,25 +24,59 @@ class FoodDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.registerCells()
+        self.setUpUI()
+        self.presenter?.viewDidLoad()
+        
+    }
+    
+    private func registerCells() {
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        self.tableView.estimatedRowHeight = 406
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.register(cellType: FoodDetailsTableViewCell.self)
+    }
+    
+    private func setUpUI() {
+        self.curatedLabel.text = "CURATED FOR MAYANAK"
+        self.headerLabel.text = self.presenter?.getHeaderText()
     }
 }
 
 extension FoodDetailsViewController: FoodDetailsViewProtocol {
     
-    func displayUI(for foodData: LocalFoodData?) {
-        
+    func reloadTableView() {
+        self.tableView.reloadData()
+    }
+    
+    func displayUI() {
+        guard let presenter = self.presenter else { return }
+        self.coverImageView.setImage(with: presenter.getSelectedCoverImageUrl(), placeHolder: UIImageView.placeHolderImage, completed: nil)
+        self.pageControl.numberOfPages = presenter.numberOfPages()
+        self.pageControl.currentPage = presenter.currentSelectedIndex
     }
 }
 
 extension FoodDetailsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        guard let presenter = self.presenter else { return 0 }
+        return presenter.numberOfItemsIn(section: 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: "FoodDetailCell", for: indexPath)
+        guard let presenter = self.presenter else { return UITableViewCell() }
+        let card = presenter.getFoodItemAt(indexPath: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FoodDetailsTableViewCell.reuseIdentifier, for: indexPath) as? FoodDetailsTableViewCell else { return FoodDetailsTableViewCell() }
+        cell.configure(forCard: card)
+        return cell
+    }
+}
+
+extension FoodDetailsViewController: UITableViewDelegate {
+        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let presenter = self.presenter else { return }
+        presenter.selectedCard(atIndex: indexPath)
     }
 }
 

@@ -10,15 +10,22 @@ import Foundation
 
 protocol FoodDetailsViewProtocol: AnyObject {
     var presenter: FoodDetailsPresenterProtocol? { get set }
-    func displayUI(for foodData: LocalFoodData?)
+    func displayUI()
+    func reloadTableView()
 }
 
 // View to Presenter
 protocol FoodDetailsPresenterProtocol: AnyObject {
     var view: FoodDetailsViewProtocol? { get set }
     var foodData: LocalFoodData { get set }
-    var selectedIndex: Int { get set }
+    var currentSelectedIndex: Int { get set }
    
-    init(foodData: LocalFoodData, selectedIndex: Int)
+    init(foodData: LocalFoodData, currentSelectedIndex: Int)
     func viewDidLoad()
+    func numberOfItemsIn(section: Int) -> Int
+    func getFoodItemAt(indexPath: IndexPath) -> Card
+    func getHeaderText() -> String
+    func getSelectedCoverImageUrl() -> String?
+    func numberOfPages() -> Int
+    func selectedCard(atIndex indexPath: IndexPath)
 }

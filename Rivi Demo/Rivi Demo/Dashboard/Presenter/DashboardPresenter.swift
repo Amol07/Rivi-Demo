@@ -43,6 +43,7 @@ class DashboardPresenter: DashboardPresenterProtocol {
         guard let foodData = self.foodData else {
             return
         }
+        foodData.card?[indexPath.row].isExpanded = true
         self.router?.presentFoodDetailScreen(from: self.view, forIndex: indexPath.row, andDetail: foodData)
     }
     
