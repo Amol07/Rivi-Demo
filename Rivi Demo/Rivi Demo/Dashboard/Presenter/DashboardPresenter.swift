@@ -58,7 +58,7 @@ class DashboardPresenter: DashboardPresenterProtocol {
         guard var card = cards else {
             return
         }
-        var showLessCard = Card(cardType: .show)
+        let showLessCard = Card(cardType: .show)
         showLessCard.title = "SHOW LESS"
         card.append(showLessCard)
         self.expandedDataSource = card
@@ -69,7 +69,7 @@ class DashboardPresenter: DashboardPresenterProtocol {
             return
         }
         if card.count > self.maxCardToShowCount {
-            var showMoreCard = Card(cardType: .show)
+            let showMoreCard = Card(cardType: .show)
             showMoreCard.title = "SHOW MORE"
             let slice = card.prefix(self.maxCardToShowCount)
             var card = Array(slice)

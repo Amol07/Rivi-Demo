@@ -20,9 +20,8 @@ class DashboardInteractor: DashboardInteractorInputProtocol {
 extension DashboardInteractor: DashboardFetcherOutputProtocol {
     
     func didFetchLocalFoodData(response: LocalFoodData) {
-        var tempResponse = response
-        tempResponse.card?.sort(by: { $0.cardNo ?? 0 < $1.cardNo ?? 0 })
-        self.presenter?.didFetch(response: tempResponse)
+        response.card?.sort(by: { $0.cardNo ?? 0 < $1.cardNo ?? 0 })
+        self.presenter?.didFetch(response: response)
     }
     
     func failedWith(error: CustomError?) {

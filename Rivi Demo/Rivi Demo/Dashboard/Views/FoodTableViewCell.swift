@@ -17,7 +17,7 @@ class FoodTableViewCell: UITableViewCell, Reusable {
             self.foodImageView.layer.cornerRadius = 5.0
         }
     }
-    @IBOutlet private weak var dropDownImageView: UIImageView!
+    @IBOutlet private weak var sepratorView: UIView!
     
     func configure(forCard card: Card) {
         self.titleLabel.text = card.title
@@ -25,8 +25,13 @@ class FoodTableViewCell: UITableViewCell, Reusable {
         self.foodImageView.setImage(with: card.cardImage, placeHolder: UIImageView.placeHolderImage)
     }
     
+    // Methods for details food cell.
+    
+    func displaySeprator(isExpanded: Bool) {
+        isExpanded ? (self.sepratorView.isHidden =  false) :( self.sepratorView.isHidden =  true)
+    }
+    
     func updateContainerView() {
-        self.containerView.layer.cornerRadius = 8
-        self.containerView.addShadow()
+        self.containerView.layer.cornerRadius = 5
     }
 }

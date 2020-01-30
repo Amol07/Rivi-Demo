@@ -44,10 +44,12 @@ class FoodDetailsPresenter: FoodDetailsPresenterProtocol {
     func selectedCard(atIndex indexPath: IndexPath) {
         guard let cards = self.foodData.card, self.currentSelectedIndex != indexPath.item else { return }
         cards[self.currentSelectedIndex].isExpanded = false
+        var indicies = [IndexPath(item: self.currentSelectedIndex, section: 0)]
         self.currentSelectedIndex = indexPath.item
+        indicies.append(indexPath)
         cards[self.currentSelectedIndex].isExpanded = true
         self.view?.displayUI()
-        self.view?.reloadTableView()
+        self.view?.reloadTableView(withIndicies: indicies)
     }
     
     func numberOfPages() -> Int {

@@ -11,7 +11,7 @@ import Foundation
 protocol FoodDetailsViewProtocol: AnyObject {
     var presenter: FoodDetailsPresenterProtocol? { get set }
     func displayUI()
-    func reloadTableView()
+    func reloadTableView(withIndicies indicies: [IndexPath])
 }
 
 // View to Presenter

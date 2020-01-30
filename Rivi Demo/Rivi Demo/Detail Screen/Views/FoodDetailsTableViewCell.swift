@@ -21,11 +21,12 @@ class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
     
     override func configure(forCard card: Card) {
         super.configure(forCard: card)
+        super.displaySeprator(isExpanded: card.isExpanded)
         if card.isExpanded {
             self.detailContainerView.isHidden = false
         } else {
             self.detailContainerView.isHidden = true
         }
-        //super.updateContainerView()
+        super.updateContainerView()
     }
 }

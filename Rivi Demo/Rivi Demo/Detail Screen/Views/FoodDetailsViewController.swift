@@ -45,8 +45,10 @@ class FoodDetailsViewController: UIViewController {
 
 extension FoodDetailsViewController: FoodDetailsViewProtocol {
     
-    func reloadTableView() {
-        self.tableView.reloadData()
+    func reloadTableView(withIndicies indicies: [IndexPath]) {
+        self.tableView.beginUpdates()
+        self.tableView.reloadRows(at: indicies, with: .none)
+        self.tableView.endUpdates()
     }
     
     func displayUI() {
