@@ -39,9 +39,9 @@ extension DashboardViewController: DashboardViewProtocol {
         self.setupUI()
         self.tableView.reloadData()
         self.indicator.stopAnimating()
-        self.contentView.isHidden = false
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 100)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
             self.contentView.updateShadow()
+            self.contentView.isHidden = false
         }
     }
     
@@ -81,7 +81,7 @@ extension DashboardViewController: UITableViewDelegate {
         if card.cardType == .show {
             presenter.isExpanded = !presenter.isExpanded
             tableView.reloadData()
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.init(uptimeNanoseconds: 100)) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
                 self.contentView.updateShadow()
             }
         } else {

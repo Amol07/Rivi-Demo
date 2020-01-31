@@ -16,10 +16,10 @@ class DashboardPresenter: DashboardPresenterProtocol {
     var isExpanded: Bool = false
     
     private var maxCardToShowCount: Int = 2
-    private var expandedDataSource: [Card] = [Card]()
-    private var contractedDataSource: [Card] = [Card]()
-    private var foodData: LocalFoodData?
-    private var dataSource: [Card] {
+    private var expandedDataSource: [FoodConfigurable] = [FoodConfigurable]()
+    private var contractedDataSource: [FoodConfigurable] = [FoodConfigurable]()
+    private var foodViewModel: FoodDataViewModel?
+    private var dataSource: [FoodConfigurable] {
         if self.isExpanded {
             return self.expandedDataSource
         } else {
@@ -35,45 +35,47 @@ class DashboardPresenter: DashboardPresenterProtocol {
         return self.dataSource.count
     }
     
-    func getFoodItemAt(indexPath: IndexPath) -> Card {
+    func getFoodItemAt(indexPath: IndexPath) -> FoodConfigurable {
         return self.dataSource[indexPath.item]
     }
     
     func didSelectFoodItem(at indexPath: IndexPath) {
-        guard let foodData = self.foodData else {
+        guard let foodVm = self.foodViewModel else {
             return
         }
-        foodData.card?[indexPath.row].isExpanded = true
-        self.router?.presentFoodDetailScreen(from: self.view, forIndex: indexPath.row, andDetail: foodData)
+        foodVm.foodArray?[indexPath.row].isExpanded = true
+        self.router?.presentFoodDetailScreen(from: self.view, forIndex: indexPath.row, andDetail: foodVm)
     }
     
     func getHeaderText() -> String {
-        guard let foodData = self.foodData else {
+        guard let foodVm = self.foodViewModel else {
             return ""
         }
-        return "\(foodData.headerDetails?.title ?? "") \(foodData.headerDetails?.city ?? "")"
+        return "\(foodVm.foodHeaderDetails?.title ?? "") \(foodVm.foodHeaderDetails?.city ?? "")"
     }
     
-    private func createExpandedDataSource(forCards cards: [Card]?) {
+    private func createExpandedDataSource(forCards cards: [FoodConfigurable]?) {
         guard var card = cards else {
             return
         }
         let showLessCard = Card(cardType: .show)
         showLessCard.title = "SHOW LESS"
-        card.append(showLessCard)
+        let showLessVm = FoodViewModel(model: showLessCard)
+        card.append(showLessVm)
         self.expandedDataSource = card
     }
     
-    private func createContractedDataSource(forCards cards: [Card]?) {
+    private func createContractedDataSource(forCards cards: [FoodConfigurable]?) {
         guard let card = cards else {
             return
         }
         if card.count > self.maxCardToShowCount {
             let showMoreCard = Card(cardType: .show)
             showMoreCard.title = "SHOW MORE"
+            let showMoreVm = FoodViewModel(model: showMoreCard)
             let slice = card.prefix(self.maxCardToShowCount)
             var card = Array(slice)
-            card.append(showMoreCard)
+            card.append(showMoreVm)
             self.contractedDataSource = card
         } else {
             self.contractedDataSource = card
@@ -84,9 +86,9 @@ class DashboardPresenter: DashboardPresenterProtocol {
 extension DashboardPresenter: DashboardInteractorOutputProtocol {
     
     func didFetch(response: LocalFoodData) {
-        self.foodData = response
-        self.createExpandedDataSource(forCards: response.card)
-        self.createContractedDataSource(forCards: response.card)
+        self.foodViewModel = FoodDataViewModel(model: response)
+        self.createExpandedDataSource(forCards: self.foodViewModel?.foodArray)
+        self.createContractedDataSource(forCards: self.foodViewModel?.foodArray)
         self.view?.loadingFinished()
     }
     

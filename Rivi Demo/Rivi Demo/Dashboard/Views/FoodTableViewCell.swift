@@ -19,10 +19,10 @@ class FoodTableViewCell: UITableViewCell, Reusable {
     }
     @IBOutlet private weak var sepratorView: UIView!
     
-    func configure(forCard card: Card) {
+    func configure(forCard card: FoodConfigurable) {
         self.titleLabel.text = card.title
         self.descriptionLabel.text = card.description
-        self.foodImageView.setImage(with: card.cardImage, placeHolder: UIImageView.placeHolderImage)
+        self.foodImageView.setImage(with: card.imageUrl, placeHolder: UIImageView.placeHolderImage)
     }
     
     // Methods for details food cell.

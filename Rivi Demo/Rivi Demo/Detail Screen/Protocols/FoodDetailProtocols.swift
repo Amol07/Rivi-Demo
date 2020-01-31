@@ -17,13 +17,13 @@ protocol FoodDetailsViewProtocol: AnyObject {
 // View to Presenter
 protocol FoodDetailsPresenterProtocol: AnyObject {
     var view: FoodDetailsViewProtocol? { get set }
-    var foodData: LocalFoodData { get set }
+    var foodData: FoodDataViewModel { get set }
     var currentSelectedIndex: Int { get set }
    
-    init(foodData: LocalFoodData, currentSelectedIndex: Int)
+    init(foodData: FoodDataViewModel, currentSelectedIndex: Int)
     func viewDidLoad()
     func numberOfItemsIn(section: Int) -> Int
-    func getFoodItemAt(indexPath: IndexPath) -> Card
+    func getFoodItemAt(indexPath: IndexPath) -> FoodConfigurable
     func getHeaderText() -> String
     func getSelectedCoverImageUrl() -> String?
     func numberOfPages() -> Int

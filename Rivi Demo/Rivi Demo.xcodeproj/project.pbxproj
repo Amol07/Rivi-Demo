@@ -17,6 +17,12 @@
 		3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */; };
 		3C33447D23E1F19F00231A13 /* FoodDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */; };
 		3C33447E23E1F19F00231A13 /* FoodDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */; };
+		3C34BC3A23E2EBF1000FFB40 /* FoodDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34BC3923E2EBF1000FFB40 /* FoodDetailsView.swift */; };
+		3C34BC3C23E3E594000FFB40 /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34BC3B23E3E594000FFB40 /* FoodViewModel.swift */; };
+		3C34BC3E23E3FBE9000FFB40 /* FontsAndColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34BC3D23E3FBE9000FFB40 /* FontsAndColor.swift */; };
+		3C34BC4123E423FD000FFB40 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34BC3F23E423FD000FFB40 /* PhotosCollectionViewCell.swift */; };
+		3C34BC4223E423FD000FFB40 /* PhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C34BC4023E423FD000FFB40 /* PhotosCollectionViewCell.xib */; };
+		3C34BC4423E424EF000FFB40 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C34BC4323E424EF000FFB40 /* CollectionViewDataSource.swift */; };
 		3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703223DF181C009EDFBD /* AppDelegate.swift */; };
 		3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E703423DF181C009EDFBD /* SceneDelegate.swift */; };
 		3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C5E703823DF181C009EDFBD /* Main.storyboard */; };
@@ -59,6 +65,12 @@
 		3C33447923E18E1300231A13 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
 		3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		3C34BC3923E2EBF1000FFB40 /* FoodDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailsView.swift; sourceTree = "<group>"; };
+		3C34BC3B23E3E594000FFB40 /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
+		3C34BC3D23E3FBE9000FFB40 /* FontsAndColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsAndColor.swift; sourceTree = "<group>"; };
+		3C34BC3F23E423FD000FFB40 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		3C34BC4023E423FD000FFB40 /* PhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		3C34BC4323E424EF000FFB40 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		3C5E702F23DF181C009EDFBD /* Rivi Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rivi Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C5E703223DF181C009EDFBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C5E703423DF181C009EDFBD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5E707A23E03D47009EDFBD /* DashboardPresenter.swift */,
+				3C34BC3B23E3E594000FFB40 /* FoodViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -252,6 +265,10 @@
 				3C33446D23E0BF0D00231A13 /* FoodDetailsViewController.swift */,
 				3C33447B23E1F19F00231A13 /* FoodDetailsTableViewCell.swift */,
 				3C33447C23E1F19F00231A13 /* FoodDetailsTableViewCell.xib */,
+				3C34BC3923E2EBF1000FFB40 /* FoodDetailsView.swift */,
+				3C34BC3F23E423FD000FFB40 /* PhotosCollectionViewCell.swift */,
+				3C34BC4023E423FD000FFB40 /* PhotosCollectionViewCell.xib */,
+				3C34BC4323E424EF000FFB40 /* CollectionViewDataSource.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				3C5E706E23E02A56009EDFBD /* UIView+Ext.swift */,
+				3C34BC3D23E3FBE9000FFB40 /* FontsAndColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C5E703F23DF181D009EDFBD /* LaunchScreen.storyboard in Resources */,
+				3C34BC4223E423FD000FFB40 /* PhotosCollectionViewCell.xib in Resources */,
 				3C5E703C23DF181D009EDFBD /* Assets.xcassets in Resources */,
 				3C33447E23E1F19F00231A13 /* FoodDetailsTableViewCell.xib in Resources */,
 				3C5E703A23DF181C009EDFBD /* Main.storyboard in Resources */,
@@ -490,10 +509,12 @@
 			files = (
 				3C5E707323E038B0009EDFBD /* DashboardViewController.swift in Sources */,
 				3C5E703323DF181C009EDFBD /* AppDelegate.swift in Sources */,
+				3C34BC3C23E3E594000FFB40 /* FoodViewModel.swift in Sources */,
 				3C33446E23E0BF0D00231A13 /* FoodDetailsViewController.swift in Sources */,
 				3C5E706823E02906009EDFBD /* Reachability.swift in Sources */,
 				3C33447023E0BF2600231A13 /* FoodDetailProtocols.swift in Sources */,
 				3C33447223E0BFCA00231A13 /* FoodDetailsPresenter.swift in Sources */,
+				3C34BC3A23E2EBF1000FFB40 /* FoodDetailsView.swift in Sources */,
 				3C5E703523DF181C009EDFBD /* SceneDelegate.swift in Sources */,
 				3C5E706F23E02A56009EDFBD /* UIView+Ext.swift in Sources */,
 				3C5E706A23E02925009EDFBD /* ApiClient.swift in Sources */,
@@ -503,11 +524,14 @@
 				3C33447D23E1F19F00231A13 /* FoodDetailsTableViewCell.swift in Sources */,
 				3C5E707F23E03D6C009EDFBD /* DashboardFetcher.swift in Sources */,
 				3C5E707D23E03D5E009EDFBD /* DashboardInteractor.swift in Sources */,
+				3C34BC4123E423FD000FFB40 /* PhotosCollectionViewCell.swift in Sources */,
 				3C33447A23E18E1300231A13 /* ShowMoreTableViewCell.swift in Sources */,
 				3C5E707123E02A7F009EDFBD /* EndPoints.swift in Sources */,
 				3C5E707523E03939009EDFBD /* DashboardRouter.swift in Sources */,
 				3C5E706D23E02989009EDFBD /* CustomError.swift in Sources */,
+				3C34BC4423E424EF000FFB40 /* CollectionViewDataSource.swift in Sources */,
 				3C33447823E1863400231A13 /* FoodTableViewCell.swift in Sources */,
+				3C34BC3E23E3FBE9000FFB40 /* FontsAndColor.swift in Sources */,
 				3C33447623E16FFB00231A13 /* ShadowView.swift in Sources */,
 				3C5E707B23E03D47009EDFBD /* DashboardPresenter.swift in Sources */,
 			);

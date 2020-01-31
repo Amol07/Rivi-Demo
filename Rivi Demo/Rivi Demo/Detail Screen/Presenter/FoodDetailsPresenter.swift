@@ -10,12 +10,12 @@ import Foundation
 
 class FoodDetailsPresenter: FoodDetailsPresenterProtocol {
     weak var view: FoodDetailsViewProtocol?
-    var foodData: LocalFoodData
+    var foodData: FoodDataViewModel
     var currentSelectedIndex: Int
     
     //private var tempSelectedIndex: Int
     
-    required init(foodData: LocalFoodData, currentSelectedIndex: Int) {
+    required init(foodData: FoodDataViewModel, currentSelectedIndex: Int) {
         self.foodData = foodData
         self.currentSelectedIndex = currentSelectedIndex
         //self.tempSelectedIndex = selectedIndex
@@ -26,43 +26,43 @@ class FoodDetailsPresenter: FoodDetailsPresenterProtocol {
     }
     
     func numberOfItemsIn(section: Int) -> Int {
-        guard let cards = self.foodData.card else { return 0 }
-        return cards.count
+        guard let foodArray = self.foodData.foodArray else { return 0 }
+        return foodArray.count
     }
     
-    func getFoodItemAt(indexPath: IndexPath) -> Card {
-        guard let cards = self.foodData.card else { return Card(cardType: .invalid) }
-        return cards[indexPath.item]
+    func getFoodItemAt(indexPath: IndexPath) -> FoodConfigurable {
+        guard let foodArray = self.foodData.foodArray else { return FoodViewModel(model: Card(cardType: .invalid)) }
+        return foodArray[indexPath.item]
     }
     
     func getSelectedCoverImageUrl() -> String? {
-        guard let cards = self.foodData.card else { return "" }
-        let card = cards[self.currentSelectedIndex]
-        return card.cardImage
+        guard let foodArray = self.foodData.foodArray else { return "" }
+        let food = foodArray[self.currentSelectedIndex]
+        return food.imageUrl
     }
     
     func selectedCard(atIndex indexPath: IndexPath) {
-        guard let cards = self.foodData.card, self.currentSelectedIndex != indexPath.item else { return }
-        cards[self.currentSelectedIndex].isExpanded = false
+        guard var foodArray = self.foodData.foodArray, self.currentSelectedIndex != indexPath.item else { return }
+        foodArray[self.currentSelectedIndex].isExpanded = false
         var indicies = [IndexPath(item: self.currentSelectedIndex, section: 0)]
         self.currentSelectedIndex = indexPath.item
         indicies.append(indexPath)
-        cards[self.currentSelectedIndex].isExpanded = true
+        foodArray[self.currentSelectedIndex].isExpanded = true
         self.view?.displayUI()
         self.view?.reloadTableView(withIndicies: indicies)
     }
     
     func numberOfPages() -> Int {
-        guard let cards = self.foodData.card else { return 0 }
-        return cards.count
+        guard let foodArray = self.foodData.foodArray else { return 0 }
+        return foodArray.count
     }
     
     func getHeaderText() -> String {
-        return "\(self.foodData.headerDetails?.title ?? "") \(self.foodData.headerDetails?.city ?? "")"
+        return "\(self.foodData.foodHeaderDetails?.title ?? "") \(self.foodData.foodHeaderDetails?.city ?? "")"
     }
     
     deinit {
-        guard let cards = self.foodData.card else { return }
-        cards[self.currentSelectedIndex].isExpanded = false
+        guard var foodArray = self.foodData.foodArray else { return }
+        foodArray[self.currentSelectedIndex].isExpanded = false
     }
 }

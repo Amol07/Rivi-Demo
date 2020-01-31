@@ -35,7 +35,7 @@ class DashboardRouter: DashboardRouterProtocol {
         return UIViewController()
     }
     
-    static func createFoodDetailModule(withIndex selectedIndex: Int, foodDetail: LocalFoodData) -> UIViewController {
+    static func createFoodDetailModule(withIndex selectedIndex: Int, foodDetail: FoodDataViewModel) -> UIViewController {
         if let view = mainStoryboard.instantiateViewController(withIdentifier: "FoodDetailsViewController") as? FoodDetailsViewController {
             let presenter: FoodDetailsPresenterProtocol = FoodDetailsPresenter(foodData: foodDetail, currentSelectedIndex: selectedIndex)
             view.presenter = presenter
@@ -45,7 +45,7 @@ class DashboardRouter: DashboardRouterProtocol {
         return FoodDetailsViewController()
     }
     
-    func presentFoodDetailScreen(from view: DashboardViewProtocol?, forIndex selectedIndex: Int, andDetail foodDetail: LocalFoodData) {
+    func presentFoodDetailScreen(from view: DashboardViewProtocol?, forIndex selectedIndex: Int, andDetail foodDetail: FoodDataViewModel) {
         let detailVc = type(of: self).createFoodDetailModule(withIndex: selectedIndex, foodDetail: foodDetail)
         if let view = view as? UIViewController {
             view.navigationController?.present(detailVc, animated: true, completion: nil)

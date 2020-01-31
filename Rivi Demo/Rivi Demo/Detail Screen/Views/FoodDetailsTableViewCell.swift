@@ -11,7 +11,7 @@ import UIKit
 class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
     
     @IBOutlet private weak var parentStackView: UIStackView!
-    @IBOutlet private weak var detailContainerView: UIView!
+    @IBOutlet private weak var detailContainerView: FoodDetailsView!
     @IBOutlet private weak var detailContainerStackView: UIStackView!
 
     override func awakeFromNib() {
@@ -19,11 +19,12 @@ class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
         // Initialization code
     }
     
-    override func configure(forCard card: Card) {
+    override func configure(forCard card: FoodConfigurable) {
         super.configure(forCard: card)
         super.displaySeprator(isExpanded: card.isExpanded)
         if card.isExpanded {
             self.detailContainerView.isHidden = false
+            self.detailContainerView.configureViews(foodDetails: card.cardDetails!)
         } else {
             self.detailContainerView.isHidden = true
         }

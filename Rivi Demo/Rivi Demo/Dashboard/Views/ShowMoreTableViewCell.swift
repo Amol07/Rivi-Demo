@@ -11,7 +11,7 @@ import UIKit
 class ShowMoreTableViewCell: UITableViewCell, Reusable {
     @IBOutlet private weak var titleLabel: UILabel!
     
-    func configure(forCard card: Card) {
+    func configure(forCard card: FoodConfigurable) {
         self.titleLabel.text = card.title
     }
 }

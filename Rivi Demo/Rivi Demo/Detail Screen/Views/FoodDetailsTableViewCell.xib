@@ -86,25 +86,25 @@
                                             <constraint firstItem="dIK-pZ-n14" firstAttribute="leading" secondItem="Lpq-4d-0zH" secondAttribute="leading" id="la0-mh-QaS"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-4W-MkV">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-4W-MkV" customClass="FoodDetailsView" customModule="Rivi_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="358" height="316"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-ob-1Vr">
                                                 <rect key="frame" x="6" y="0.0" width="346" height="316"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-xK-H1Q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="74.5"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-xK-H1Q" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="72"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-HU-B2v">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="12"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGE-mz-bb5">
-                                                                <rect key="frame" x="0.0" y="26.5" width="346" height="48"/>
+                                                                <rect key="frame" x="0.0" y="24" width="346" height="48"/>
                                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</string>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -119,18 +119,22 @@
                                                             <constraint firstItem="Fp1-HU-B2v" firstAttribute="leading" secondItem="2fB-xK-H1Q" secondAttribute="leading" id="Wcl-cS-aYr"/>
                                                             <constraint firstAttribute="trailing" secondItem="Fp1-HU-B2v" secondAttribute="trailing" id="g41-DC-XKt"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="descriptionLabel" destination="QGE-mz-bb5" id="Dwd-C2-OLL"/>
+                                                            <outlet property="titleLabel" destination="Fp1-HU-B2v" id="02S-oD-e3G"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-el-QMm">
-                                                        <rect key="frame" x="0.0" y="74.5" width="346" height="53"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-el-QMm" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="72" width="346" height="48"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="WHERE TO EAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-UB-jk2">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="12"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm5-jt-0m4">
-                                                                <rect key="frame" x="0.0" y="26.5" width="346" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="24" width="346" height="24"/>
                                                                 <string key="text">1.  Chilis (4Km from City Centre)
 2.  Big Chill (1Km from City Centre)</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -148,20 +152,24 @@
                                                             <constraint firstItem="8TV-UB-jk2" firstAttribute="leading" secondItem="yaK-el-QMm" secondAttribute="leading" id="l45-Hc-sFc"/>
                                                             <constraint firstItem="8TV-UB-jk2" firstAttribute="top" secondItem="yaK-el-QMm" secondAttribute="top" constant="8" id="vR3-fk-SNu"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="descriptionLabel" destination="Wm5-jt-0m4" id="2UB-Su-FMw"/>
+                                                            <outlet property="titleLabel" destination="8TV-UB-jk2" id="EtL-G7-GWq"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIo-dc-OJU">
-                                                        <rect key="frame" x="0.0" y="127.5" width="346" height="53"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIo-dc-OJU" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="120" width="346" height="48"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLI-eo-YJ9">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="14.5"/>
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="12"/>
                                                                 <string key="text">BEST PAELLA DISHES
 </string>
-                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUh-6L-MGQ">
-                                                                <rect key="frame" x="0.0" y="26.5" width="346" height="26.5"/>
+                                                                <rect key="frame" x="0.0" y="24" width="346" height="24"/>
                                                                 <string key="text">1.  Ravioli Paella
 2.  Pesto Paella</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -179,23 +187,27 @@
                                                             <constraint firstItem="JUh-6L-MGQ" firstAttribute="leading" secondItem="HIo-dc-OJU" secondAttribute="leading" id="kFc-Aw-Abe"/>
                                                             <constraint firstAttribute="bottom" secondItem="JUh-6L-MGQ" secondAttribute="bottom" id="pxI-BN-Fxy"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="descriptionLabel" destination="JUh-6L-MGQ" id="HLD-ge-kNP"/>
+                                                            <outlet property="titleLabel" destination="JLI-eo-YJ9" id="79Z-hz-fzj"/>
+                                                        </connections>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-HH-gIV">
-                                                        <rect key="frame" x="0.0" y="180.5" width="346" height="97"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-HH-gIV" customClass="FoodPhotoView" customModule="Rivi_Demo" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="168" width="346" height="108"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="PHOTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-mD-4g4">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="14.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
-                                                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="12"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ps3-ZQ-yWm">
-                                                                <rect key="frame" x="0.0" y="26.5" width="346" height="66.5"/>
+                                                                <rect key="frame" x="0.0" y="24" width="346" height="80"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" priority="750" constant="80" id="r2q-kH-C0s"/>
+                                                                    <constraint firstAttribute="height" constant="80" id="r2q-kH-C0s"/>
                                                                 </constraints>
-                                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MeV-b6-Coy">
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MeV-b6-Coy">
                                                                     <size key="itemSize" width="50" height="50"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -213,13 +225,17 @@
                                                             <constraint firstItem="8hg-mD-4g4" firstAttribute="top" secondItem="bBE-HH-gIV" secondAttribute="top" constant="8" id="jdA-7R-cEc"/>
                                                             <constraint firstItem="ps3-ZQ-yWm" firstAttribute="leading" secondItem="bBE-HH-gIV" secondAttribute="leading" id="ugI-Hq-cMC"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="collectionView" destination="ps3-ZQ-yWm" id="fMs-mI-Ytt"/>
+                                                            <outlet property="titleLabel" destination="8hg-mD-4g4" id="Ycz-BA-CVS"/>
+                                                        </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIx-7L-W3K">
-                                                        <rect key="frame" x="0.0" y="277.5" width="346" height="38.5"/>
+                                                        <rect key="frame" x="0.0" y="276" width="346" height="40"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="READ MORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-d4-ZSC">
-                                                                <rect key="frame" x="144" y="4" width="58.5" height="30.5"/>
-                                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                                                <rect key="frame" x="143.5" y="4" width="59.5" height="32"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -242,6 +258,14 @@
                                             <constraint firstItem="cBn-ob-1Vr" firstAttribute="leading" secondItem="dw8-4W-MkV" secondAttribute="leading" constant="6" id="cD5-cD-F2T"/>
                                             <constraint firstAttribute="trailing" secondItem="cBn-ob-1Vr" secondAttribute="trailing" constant="6" id="g9F-Pd-2kX"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="aboutView" destination="2fB-xK-H1Q" id="0it-Yz-1MK"/>
+                                            <outlet property="dishes" destination="HIo-dc-OJU" id="bFG-W0-XnA"/>
+                                            <outlet property="locations" destination="yaK-el-QMm" id="B2V-6Y-ygM"/>
+                                            <outlet property="moreLabel" destination="cex-d4-ZSC" id="IYg-a9-mUL"/>
+                                            <outlet property="moreView" destination="aIx-7L-W3K" id="zlO-wf-7Ve"/>
+                                            <outlet property="photoView" destination="bBE-HH-gIV" id="P7H-10-ldp"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
