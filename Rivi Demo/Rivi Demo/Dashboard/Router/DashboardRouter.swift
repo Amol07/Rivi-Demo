@@ -48,7 +48,11 @@ class DashboardRouter: DashboardRouterProtocol {
     func presentFoodDetailScreen(from view: DashboardViewProtocol?, forIndex selectedIndex: Int, andDetail foodDetail: FoodDataViewModel) {
         let detailVc = type(of: self).createFoodDetailModule(withIndex: selectedIndex, foodDetail: foodDetail)
         if let view = view as? UIViewController {
-            view.navigationController?.present(detailVc, animated: true, completion: nil)
+            // the issue by using a UITableViewCell which had its selectionStyle set to UITableViewCellSelectionStyleNone, so that no selection animation triggered the runloop after the row selection handler ran. To fix it, you can trigger the main runloop by several means:
+            // https://stackoverflow.com/questions/21075540/presentviewcontrolleranimatedyes-view-will-not-appear-until-user-taps-again
+            DispatchQueue.main.async {
+                view.navigationController?.present(detailVc, animated: true, completion: nil)
+            }
         }
     }
 }
