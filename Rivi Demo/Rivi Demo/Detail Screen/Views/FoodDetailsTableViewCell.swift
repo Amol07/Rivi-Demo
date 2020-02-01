@@ -19,6 +19,11 @@ class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
         // Initialization code
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.detailContainerView.isHidden = true
+    }
+    
     override func configure(forCard card: FoodConfigurable) {
         super.configure(forCard: card)
         super.displaySeprator(isExpanded: card.isExpanded)
@@ -29,5 +34,7 @@ class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
             self.detailContainerView.isHidden = true
         }
         super.updateContainerView()
+        self.setNeedsLayout()
+        self.layoutIfNeeded()
     }
 }
