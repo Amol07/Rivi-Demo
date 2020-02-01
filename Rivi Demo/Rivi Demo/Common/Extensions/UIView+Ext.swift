@@ -225,7 +225,12 @@ func getAttributedString(fromStringList stringList: [String],
     
     let bulletList = NSMutableAttributedString()
     for (num, string) in stringList.enumerated() {
-        let formattedString = "\(num+1)\t\(string)\n"
+        let formattedString: String
+        if stringList.count > 1 {
+            formattedString = "\(num+1)\t\(string)\n"
+        } else {
+            formattedString = "\(string)\n"
+        }
         let attributedString = NSMutableAttributedString(string: formattedString)
         
         attributedString.addAttributes(
@@ -237,7 +242,12 @@ func getAttributedString(fromStringList stringList: [String],
             range: NSMakeRange(0, attributedString.length))
         
         let string: NSString = NSString(string: formattedString)
-        let rangeForBullet: NSRange = string.range(of: "\(num+1)")
+        let rangeForBullet: NSRange
+        if stringList.count > 1 {
+            rangeForBullet = string.range(of: "\(num+1)")
+        } else {
+            rangeForBullet = string.range(of: "")
+        }
         attributedString.addAttributes(bulletAttributes, range: rangeForBullet)
         bulletList.append(attributedString)
     }
