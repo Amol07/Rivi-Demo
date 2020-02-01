@@ -26,7 +26,6 @@ class FoodTableViewCell: UITableViewCell, Reusable {
     }
     
     // Methods for details food cell.
-    
     func displaySeprator(isExpanded: Bool) {
         isExpanded ? (self.sepratorView.isHidden =  false) :( self.sepratorView.isHidden =  true)
     }

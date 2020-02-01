@@ -34,7 +34,5 @@ class FoodDetailsTableViewCell: FoodTableViewCell, NibLoadable {
             self.detailContainerView.isHidden = true
         }
         super.updateContainerView()
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
     }
 }

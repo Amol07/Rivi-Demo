@@ -27,7 +27,6 @@ class FoodDetailsViewController: UIViewController {
         self.registerCells()
         self.setUpUI()
         self.presenter?.viewDidLoad()
-        
     }
     
     private func registerCells() {
