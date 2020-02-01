@@ -32,7 +32,7 @@ class FoodDetailsViewController: UIViewController {
     
     private func registerCells() {
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        self.tableView.estimatedRowHeight = 406
+        self.tableView.estimatedRowHeight = 420
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.register(cellType: FoodDetailsTableViewCell.self)
     }

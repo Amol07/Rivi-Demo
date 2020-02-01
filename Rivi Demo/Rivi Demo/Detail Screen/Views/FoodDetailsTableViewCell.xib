@@ -89,13 +89,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dw8-4W-MkV" customClass="FoodDetailsView" customModule="Rivi_Demo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="358" height="330"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-ob-1Vr">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cBn-ob-1Vr">
                                                 <rect key="frame" x="6" y="0.0" width="346" height="330"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-xK-H1Q" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="346" height="72"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cq6-jG-spS">
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Cq6-jG-spS">
                                                                 <rect key="frame" x="0.0" y="8" width="346" height="64"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp1-HU-B2v">
@@ -127,19 +127,19 @@
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaK-el-QMm" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="72" width="346" height="49.5"/>
+                                                        <rect key="frame" x="0.0" y="72" width="346" height="50"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kEN-2D-w0I">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="41.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kEN-2D-w0I">
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="WHERE TO EAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TV-UB-jk2">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="12.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="12"/>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wm5-jt-0m4">
-                                                                        <rect key="frame" x="0.0" y="16.5" width="346" height="25"/>
+                                                                        <rect key="frame" x="0.0" y="16" width="346" height="26"/>
                                                                         <string key="text">1.  Chilis (4Km from City Centre)
 2.  Big Chill (1Km from City Centre)</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -162,10 +162,10 @@
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIo-dc-OJU" customClass="FoodDetailsTitleDescriptionView" customModule="Rivi_Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="121.5" width="346" height="48"/>
+                                                        <rect key="frame" x="0.0" y="122" width="346" height="50"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-ud-Uni">
-                                                                <rect key="frame" x="0.0" y="8" width="346" height="40"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OwW-ud-Uni">
+                                                                <rect key="frame" x="0.0" y="8" width="346" height="42"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLI-eo-YJ9">
                                                                         <rect key="frame" x="0.0" y="0.0" width="346" height="12"/>
@@ -176,7 +176,7 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUh-6L-MGQ">
-                                                                        <rect key="frame" x="0.0" y="16" width="346" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="16" width="346" height="26"/>
                                                                         <string key="text">1.  Ravioli Paella
 2.  Pesto Paella</string>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -199,7 +199,7 @@
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bBE-HH-gIV" customClass="FoodPhotoView" customModule="Rivi_Demo" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="169.5" width="346" height="108"/>
+                                                        <rect key="frame" x="0.0" y="172" width="346" height="109.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="PHOTOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hg-mD-4g4">
                                                                 <rect key="frame" x="0.0" y="8" width="346" height="12"/>
@@ -208,7 +208,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ps3-ZQ-yWm">
-                                                                <rect key="frame" x="0.0" y="24" width="346" height="80"/>
+                                                                <rect key="frame" x="0.0" y="24" width="346" height="81.5"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="r2q-kH-C0s"/>
@@ -237,13 +237,13 @@
                                                         </connections>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIx-7L-W3K">
-                                                        <rect key="frame" x="0.0" y="277.5" width="346" height="52.5"/>
+                                                        <rect key="frame" x="0.0" y="281.5" width="346" height="48.5"/>
                                                         <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4Sf-rQ-S1A">
-                                                                <rect key="frame" x="0.0" y="10" width="346" height="37.5"/>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="4Sf-rQ-S1A">
+                                                                <rect key="frame" x="0.0" y="10" width="346" height="33.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="READ MORE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cex-d4-ZSC">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="37.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="346" height="33.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -294,7 +294,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="riQ-kG-ZAK" firstAttribute="leading" secondItem="n4m-fD-TbO" secondAttribute="leading" constant="20" id="YLo-mc-Hb1"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="riQ-kG-ZAK" secondAttribute="bottom" constant="20" id="cjz-8v-Arb"/>
+                    <constraint firstAttribute="bottom" secondItem="riQ-kG-ZAK" secondAttribute="bottom" constant="20" id="gKE-CG-Dxh"/>
                     <constraint firstItem="riQ-kG-ZAK" firstAttribute="top" secondItem="n4m-fD-TbO" secondAttribute="top" id="lko-9L-CTv"/>
                     <constraint firstAttribute="trailing" secondItem="riQ-kG-ZAK" secondAttribute="trailing" constant="20" id="qk4-q3-cuY"/>
                 </constraints>
